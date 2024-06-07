@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Ground
+  - Obstacle
   - jumpy
-  - away
+  - ScoreText
+  - GameOverText
+  - ScoreZone
   layers:
   - Default
   - TransparentFX
