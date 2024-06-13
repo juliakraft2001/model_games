@@ -13,6 +13,7 @@ namespace Julia
 //the layers the ray can hit
         public LayerMask hitLayers;
         
+        
         public float jumpForce = 10f;
         public float gravityScale = 3f; // Skaliere die Schwerkraft
         public Rigidbody rb;
