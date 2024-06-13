@@ -129,7 +129,8 @@ namespace Julia
 
         void Update()
         {
-            // Player movement while the mouse button is held down
+            // Player movement while the mouse button is held down, move/roll there not beam
+
             if (Input.GetMouseButton(0))
             {
                 Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -140,8 +141,11 @@ namespace Julia
                 {
                     Vector3 targetPosition = ray.GetPoint(distance);
                     rb.MovePosition(targetPosition);
+                    //transform.position = targetPosition;
                 }
             }
+
+
 
             // Player jumps when the mouse button is released
             if (Input.GetMouseButtonUp(0) && isGrounded)
@@ -189,7 +193,7 @@ namespace Julia
                 CheckWinCondition();
             }
         }
-
+        
         void OnCollisionStay(Collision other)
         {
             if (other.gameObject.CompareTag("Wall"))
